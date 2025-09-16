@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace _5_OperatorsChallenge
 {
@@ -6,7 +7,12 @@ namespace _5_OperatorsChallenge
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("THis is a test");
+            Console.WriteLine("Enter two numbers:");
+            int Num1 = int.Parse(Console.ReadLine());
+            int Num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Is the first number greater than the second number, or else greater than zero?");
+            Console.WriteLine(Or(Num1, Num2) ? "Yes." : "No.");
         }
 
         /// <summary>
@@ -16,7 +22,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Increment(int num)
         {
-            throw new NotImplementedException($"Increment() is not implemented yet.");
+            // throw new NotImplementedException($"Increment() is not implemented yet.");
+            return ++num;
         }
 
         /// <summary>
@@ -26,7 +33,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Decrement(int num)
         {
-            throw new NotImplementedException($"Decrement() is not implemented yet");
+            // throw new NotImplementedException($"Decrement() is not implemented yet");
+            return --num;
         }
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static bool Not(bool input)
         {
-            throw new NotImplementedException($"Not() is not implemented yet");
+            // throw new NotImplementedException($"Not() is not implemented yet");
+            return !input;
         }
 
         /// <summary>
@@ -46,7 +55,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Negate(int num)
         {
-            throw new NotImplementedException($"Negate() is not implemented yet");
+            // throw new NotImplementedException($"Negate() is not implemented yet");
+            return -num;
 
         }
 
@@ -58,7 +68,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Sum(int num1, int num2)
         {
-            throw new NotImplementedException($"Sum() is not implemented yet");
+            // throw new NotImplementedException($"Sum() is not implemented yet");
+            return num1 + num2;
         }
 
         /// <summary>
@@ -69,18 +80,20 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Diff(int num1, int num2)
         {
-            throw new NotImplementedException($"Diff() is not implemented yet");
+            // throw new NotImplementedException($"Diff() is not implemented yet");
+            return num1 - num2;
         }
 
         /// <summary>
-        /// This method takes two ints and returns the product 
+        /// This method takes two ints and returns the product
         /// </summary>
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <returns></returns>
         public static int Product(int num1, int num2)
         {
-            throw new NotImplementedException($"Product() is not implemented yet");
+            // throw new NotImplementedException($"Product() is not implemented yet");
+            return num1 * num2;
         }
 
         /// <summary>
@@ -91,7 +104,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Quotient(int num1, int num2)
         {
-            throw new NotImplementedException($"Quotient() is not implemented yet");
+            // throw new NotImplementedException($"Quotient() is not implemented yet");
+            return num1 / num2;
         }
 
         /// <summary>
@@ -102,7 +116,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static int Remainder(int num1, int num2)
         {
-            throw new NotImplementedException($"Remainder() is not implemented yet");
+            // throw new NotImplementedException($"Remainder() is not implemented yet");
+            return num1 % num2;
         }
 
         /// <summary>
@@ -114,7 +129,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static bool And(int num1, int num2)
         {
-            throw new NotImplementedException($"And() is not implemented yet");
+            // throw new NotImplementedException($"And() is not implemented yet");
+            return num1 >= num2;
         }
 
         /// <summary>
@@ -125,7 +141,8 @@ namespace _5_OperatorsChallenge
         /// <returns></returns>
         public static bool Or(int num1, int num2)
         {
-            throw new NotImplementedException($"Or() is not implemented yet");
+            // throw new NotImplementedException($"Or() is not implemented yet");
+            return num1 > num2 || num1 > 0;
         }
     }
 }
