@@ -158,11 +158,31 @@ AND c1.CustomerId <> c2.CustomerId;
 -- DML exercises
 
 -- 1. insert two new records into the employee table.
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title)
+VALUES (9, 'Last1', 'First1', 'Title1'),
+    (10, 'Last2', 'First2', 'Title2');
+-- SELECT * FROM Employee ORDER BY EmployeeId ASC;
 
 -- 2. insert two new records into the tracks table.
+INSERT INTO Track (TrackId, Name, MediaTypeId, Milliseconds, UnitPrice)
+VALUES (3504, 'Track1', 1, 180000, 1.00),
+    (3505, 'Track2', 5, 150000, 2.00);
+-- SELECT * FROM Track ORDER BY TrackId DESC;
 
 -- 3. update customer Aaron Mitchell's name to Robert Walter
+UPDATE Customer
+SET FirstName = 'Robert',
+    LastName = 'Walter'
+WHERE Customer.FirstName = 'Aaron' AND Customer.LastName = 'Mitchell';
+-- SELECT * FROM Customer WHERE Customer.FirstName = 'Aaron' AND Customer.LastName = 'Mitchell';
+-- SELECT * FROM Customer WHERE Customer.FirstName = 'Robert' AND Customer.LastName = 'Walter';
 
 -- 4. delete one of the employees you inserted.
+DELETE FROM Employee
+WHERE EmployeeId = 10;
+-- SELECT * FROM Employee WHERE EmployeeId = 10;
 
 -- 5. delete customer Robert Walter.
+DELETE FROM Customer
+WHERE FirstName = 'Robert' AND LastName = 'Walter';
+-- SELECT * FROM Customer WHERE FirstName = 'Robert' AND LastName = 'Walter';
