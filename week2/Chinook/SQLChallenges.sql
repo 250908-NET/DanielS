@@ -140,6 +140,9 @@ AND c1.CustomerId <> c2.CustomerId;
 -- plan for them is the same, or different.
 
 -- 1. which artists did not make any albums at all?
+SELECT *
+FROM Artist
+WHERE ArtistId NOT IN (SELECT ArtistId FROM Album);
 
 -- 2. which artists did not record any tracks of the Latin genre?
 
