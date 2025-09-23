@@ -22,7 +22,8 @@ WHERE "Country" = 'Brazil';
 
 -- List all sales agents
 SELECT *
-FROM "Employee";
+FROM "Employee"
+WHERE Title LIKE '%sales%agent%';
 
 -- Retrieve a list of all countries in billing addresses on invoices
 SELECT DISTINCT "BillingCountry"
