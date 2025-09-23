@@ -86,8 +86,9 @@ WITH MostSales AS (
     FROM Employee AS e JOIN (
         SELECT Employee.EmployeeId, SUM(Invoice.Total) AS "Total Sales"
         FROM Invoice
-        JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
-        JOIN Employee ON Customer.SupportRepId = Employee.EmployeeId
+            JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
+            JOIN Employee ON Customer.SupportRepId = Employee.EmployeeId
+        WHERE YEAR(Invoice.InvoiceDate) = 2009
         GROUP BY Employee.EmployeeId
     ) AS sales
     ON e."EmployeeId" = sales."EmployeeId"
